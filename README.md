@@ -13,3 +13,8 @@ Inspired by institutional factor models like Barra, this tool helps answer the m
 - Outputs a clean factor exposure report with coefficients, p-values, and plain English significance labels
 - Calculates and annualizes alpha using standard compounding formula
 - Generates 4 interactive Plotly visualizations
+
+## Screenshots
+
+### Factor Contribution
+![Factor Contribution](Factor Contribution.png)
