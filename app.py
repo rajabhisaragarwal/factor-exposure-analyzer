@@ -12,27 +12,27 @@ st.set_page_config(page_title="Factor Exposure Analyzer", layout="wide")
 st.title("📊 Factor Exposure Analyzer")
 st.markdown("Analyze your portfolio's exposure to Fama-French 5 risk factors")
 
-st.sidebar.header("Portfolio Settings")
+st.subheader("⚙️ Portfolio Settings")
 
-start_date = st.sidebar.date_input(
+start_date = st.date_input(
     "Start Date",
     help="Select the start date for your analysis in this format: YYYY-MM-DD."
 )
 
-st.sidebar.caption("📅 Ensure your selected stocks were all publicly listed from this date onwards.")
+st.caption("📅 Ensure your selected stocks were all publicly listed from this date onwards.")
 
-tickers_input = st.sidebar.text_input(
+tickers_input = st.text_input(
     "Enter Tickers (comma separated)",
     placeholder="e.g. AAPL, MSFT, NVDA, JPM"
 )
 
-weights_input = st.sidebar.text_input(
+weights_input = st.text_input(
     "Enter Weights (must sum to 100)",
     placeholder="e.g. 40, 30, 20, 10  or  33.5, 33.5, 33",
     help="Enter one weight per ticker. Decimals are allowed. All weights must sum to 100."
 )
 
-run = st.sidebar.button("Run Analysis")
+run = st.button("Run Analysis", type="primary")
 if run:
     from datetime import date
     
