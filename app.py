@@ -22,7 +22,7 @@ st.sidebar.caption("📅 Ensure your selected stocks were all publicly listed fr
 
 tickers_input = st.sidebar.text_input(
     "Enter Tickers (comma separated)",
-    placeholder="e.g. AAPL, MSFT, NVDA, JPM" "
+    placeholder="e.g. AAPL, MSFT, NVDA, JPM"
 )
 
 weights_input = st.sidebar.text_input(
