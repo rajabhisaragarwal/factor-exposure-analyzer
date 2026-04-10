@@ -7,7 +7,11 @@ import plotly.graph_objects as go
 import streamlit as st
 import time
 
-st.set_page_config(page_title="Factor Exposure Analyzer", layout="wide")
+st.set_page_config(
+    page_title="Factor Exposure Analyzer",
+    page_icon="📊",
+    layout="wide"
+)
 
 st.title("📊 Factor Exposure Analyzer")
 st.markdown("Analyze your portfolio's exposure to Fama-French 5 risk factors")
