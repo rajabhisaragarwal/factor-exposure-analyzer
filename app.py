@@ -158,7 +158,11 @@ if run:
         xaxis=dict(range=[min(values) * 1.6, max(values) * 1.6], automargin=True),
         margin=dict(l=160)
     )
-    st.plotly_chart(fig1, use_container_width=True, config={'scrollZoom': False})
+    st.plotly_chart(fig1, use_container_width=True, config={
+    'scrollZoom': False,
+    'displayModeBar': False,
+    'staticPlot': True
+    })
 
     # --- Chart 2 — Actual vs Fitted ---
     fitted = model.fittedvalues
@@ -187,7 +191,11 @@ if run:
         height=450,
         hovermode='x unified'
     )
-    st.plotly_chart(fig2, use_container_width=True, config={'scrollZoom': False})
+    st.plotly_chart(fig2, use_container_width=True, config={
+    'scrollZoom': False,
+    'displayModeBar': False,
+    'staticPlot': True
+    })
 
     # --- Chart 3 — Cumulative Returns ---
     cumulative_portfolio = (1 + merged['Portfolio']).cumprod() - 1
@@ -217,7 +225,11 @@ if run:
         height=450,
         hovermode='x unified'
     )
-    st.plotly_chart(fig3, use_container_width=True, config={'scrollZoom': False})
+    st.plotly_chart(fig3, use_container_width=True, config={
+    'scrollZoom': False,
+    'displayModeBar': False,
+    'staticPlot': True
+    })
 
     # --- Chart 4 — Rolling Beta ---
     rolling_beta = []
@@ -262,7 +274,11 @@ if run:
         tickvals=[rolling_dates_str[i] for i in range(0, len(rolling_dates_str), 6)],
         ticktext=[rolling_dates_str[i] for i in range(0, len(rolling_dates_str), 6)]
     )
-    st.plotly_chart(fig4, use_container_width=True, config={'scrollZoom': False})
+    st.plotly_chart(fig4, use_container_width=True, config={
+    'scrollZoom': False,
+    'displayModeBar': False,
+    'staticPlot': True
+    })
 
     st.divider()
     st.caption("Data sourced from Yahoo Finance and Kenneth French's Data Library at Dartmouth. For educational and research purposes only.")
