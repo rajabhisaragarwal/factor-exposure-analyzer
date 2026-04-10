@@ -71,7 +71,7 @@ if run:
     ff_factors = ff_factors / 100
 
     prices = yf.download(tickers, start=start_date_str, auto_adjust=False)['Adj Close']
-    monthly_prices = prices.resample('ME').last()
+    monthly_prices = prices.resample('M').last()
     monthly_returns = monthly_prices.pct_change().dropna()
 
     portfolio_returns = monthly_returns.dot(weights)
