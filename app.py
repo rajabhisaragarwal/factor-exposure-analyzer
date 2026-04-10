@@ -5,6 +5,7 @@ import statsmodels.api as sm
 import pandas_datareader as pdr
 import plotly.graph_objects as go
 import streamlit as st
+import time
 
 st.set_page_config(page_title="Factor Exposure Analyzer", layout="wide")
 
@@ -51,6 +52,7 @@ if run:
 
     # --- Data Collection ---
     progress = st.info("⏳ Fetching data... please wait.")
+    time.sleep(3)
 
     tickers = [t.strip().upper() for t in tickers_input.split(",")]
     weights = [float(w.strip())/100 for w in weights_input.split(",")]
