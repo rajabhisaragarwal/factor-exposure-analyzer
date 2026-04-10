@@ -187,7 +187,7 @@ if run:
         height=450,
         hovermode='x unified'
     )
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, use_container_width=True, config={'scrollZoom': False})
 
     # --- Chart 3 — Cumulative Returns ---
     cumulative_portfolio = (1 + merged['Portfolio']).cumprod() - 1
@@ -217,7 +217,7 @@ if run:
         height=450,
         hovermode='x unified'
     )
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, use_container_width=True, config={'scrollZoom': False})
 
     # --- Chart 4 — Rolling Beta ---
     rolling_beta = []
@@ -262,7 +262,7 @@ if run:
         tickvals=[rolling_dates_str[i] for i in range(0, len(rolling_dates_str), 6)],
         ticktext=[rolling_dates_str[i] for i in range(0, len(rolling_dates_str), 6)]
     )
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, use_container_width=True, config={'scrollZoom': False})
 
     st.divider()
     st.caption("Data sourced from Yahoo Finance and Kenneth French's Data Library at Dartmouth. For educational and research purposes only.")
