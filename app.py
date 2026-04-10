@@ -50,7 +50,7 @@ if run:
         st.warning(f"⚠️ You have {months_of_data} months of data. 60+ months is recommended for stronger results, but we'll proceed.")
 
     # --- Data Collection ---
-    st.info("⏳ Fetching data... please wait.")
+    progress = st.info("⏳ Fetching data... please wait.")
 
     tickers = [t.strip().upper() for t in tickers_input.split(",")]
     weights = [float(w.strip())/100 for w in weights_input.split(",")]
@@ -105,6 +105,7 @@ if run:
     annualized_alpha = (1 + monthly_alpha) ** 12 - 1
 
     # --- Factor Report ---
+    progress.empty()
     st.success("✅ Analysis Complete!")
     st.subheader("📋 Factor Exposure Report")
 
