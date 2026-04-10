@@ -158,7 +158,7 @@ if run:
         xaxis=dict(range=[min(values) * 1.6, max(values) * 1.6], automargin=True),
         margin=dict(l=160)
     )
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fig1, use_container_width=True, config={'scrollZoom': False})
 
     # --- Chart 2 — Actual vs Fitted ---
     fitted = model.fittedvalues
