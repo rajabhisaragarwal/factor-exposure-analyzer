@@ -52,7 +52,7 @@ if run:
 
     # --- Data Collection ---
     progress = st.info("⏳ Fetching data... please wait.")
-    time.sleep(3)
+    time.sleep(1.8)
 
     tickers = [t.strip().upper() for t in tickers_input.split(",")]
     weights = [float(w.strip())/100 for w in weights_input.split(",")]
