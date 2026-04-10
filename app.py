@@ -83,6 +83,9 @@ if run:
     Y = merged['Portfolio'] - merged['RF']
     X = merged[['Mkt-RF', 'SMB', 'HML', 'RMW', 'CMA']]
     X = sm.add_constant(X)
+    if len(merged) < 24:
+    st.error(f"❌ Not enough overlapping data after merging. Only {len(merged)} months found. Try an earlier start date or different tickers that have more historical data.")
+    st.stop()
     model = sm.OLS(Y, X).fit()
 
     params = model.params
