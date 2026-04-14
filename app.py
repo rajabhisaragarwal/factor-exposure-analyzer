@@ -217,8 +217,9 @@ if run:
         x=merged.index.astype(str),
         y=cumulative_market.values,
         mode='lines',
-        name='Market',
+        name='US Total Market (FF)',
         line=dict(color='#5b8cff', width=2, dash='dash')
+        st.caption("Market benchmark represents the total US stock market portfolio as defined by Kenneth French's data library.")
     ))
     fig3.update_layout(
         title='Cumulative Returns — Portfolio vs Market',
